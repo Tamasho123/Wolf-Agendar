@@ -1,0 +1,198 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.bg-home {
+  position: relative;
+}
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
+    url(bg.svg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+/* ----------------------------------- */
+/* HERO */
+
+.hero {
+  color: white;
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 46px;
+}
+
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact1 {
+  border-radius: 10px;
+  padding: 14px 28px;
+  color: white;
+  background-color: red;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact1:hover {
+  box-shadow: 0 0 20px red;
+  animation: scaleButton 0.8s alternate infinite;
+}
+.button-contact2 {
+  border-radius: 10px;
+  padding: 14px 28px;
+  color: white;
+  background-color: red;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact2:hover {
+  box-shadow: 0 0 20px red;
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+.agendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.agendar h2 {
+  font-size: 46px;
+}
+.agendar a {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.hover-rua:hover {
+  color: red;
+  transition: color 0.5s;
+
+  font-size: 18.5px;
+}
+
+.button-agendar {
+  display: flex;
+  gap: 170px;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@media screen and (max-width: 784px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+
+  .button-agendar {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+
+/* -------------------------------------------- */
+
+/* ABOUT */
+
+.about {
+  border-color: #06121e;
+  overflow: hidden;
+  color: white;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 34px 14px 64px 14px;
+  margin: 0 120px;
+}
+.about-container img {
+  max-width: 570px;
+}
+.about-container img {
+  max-width: 570px;
+  animation: translateY 1s infinite alternate;
+}
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-2px) scale(1.04);
+  }
+}
+
+.about-container {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    margin: 15px;
+  }
+}
